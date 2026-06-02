@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inmobiliaria Silvia Díaz Di Gregorio – Tandil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --terra:       #c46a3a;
+      --terra-deep:  #a3522a;
+      --terra-light: #e08a5e;
+      --terra-pale:  #f5ddd0;
+      --amber:       #d4952a;
+      --amber-light: #edb84a;
+      --cream:       #fdf7f0;
+      --sand:        #f0e4d4;
+      --sand-dark:   #e0cdb8;
+      --warm-white:  #fffcf8;
+      --brown:       #5c3319;
+      --brown-light: #7d4f2e;
+      --warm-gray:   #957869;
+      --text:        #2e1c0e;
+      --shadow:      0 4px 24px rgba(90,40,10,0.10);
+      --shadow-lg:   0 12px 48px rgba(90,40,10,0.16);
+      --radius:      14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(46, 28, 14, 0.96);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 70px;
+      box-shadow: 0 2px 24px rgba(90,40,10,0.25);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logomark {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-title span:first-child {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fffcf8;
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+    }
+
+    .nav-title span:last-child {
+      font-size: 10px;
+      color: var(--terra-light);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,252,248,0.75);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--terra-light); }
+
+    .nav-cta {
+      background: var(--terra) !important;
+      color: #fffcf8 !important;
+      padding: 8px 20px;
+      border-radius: 8px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--terra-deep) !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fffcf8;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── HERO ── */
+    #inicio {
+      min-height: 100vh;
+      background: var(--brown);
+      background-image:
+        radial-gradient(ellipse at 75% 40%, rgba(196,106,58,0.25) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 70%, rgba(212,149,42,0.15) 0%, transparent 45%);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 100px 8% 60px;
+      gap: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle grain texture */
+    #inicio::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px;
+    }
+
+    .hero-text { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(196,106,58,0.18);
+      border: 1px solid rgba(196,106,58,0.38);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+      font-size: 11px;
+      color: var(--terra-light);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5.5vw, 74px);
+      font-weight: 700;
+      color: var(--warm-white);
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--terra-light);
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: rgba(255,252,248,0.65);
+      max-width: 460px;
+      font-weight: 300;
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--terra);
+      color: var(--warm-white);
+      box-shadow: 0 4px 20px rgba(196,106,58,0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--terra-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(196,106,58,0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: rgba(255,252,248,0.85);
+      border: 1.5px solid rgba(255,252,248,0.3);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--terra-light);
+      color: var(--terra-light);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      margin-top: 52px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,252,248,0.12);
+    }
+
+    .stat { text-align: left; }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--terra-light);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: rgba(255,252,248,0.45);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 5px;
+    }
+
+    .hero-illustration {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-illustration svg {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      opacity: 0.88;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 96px 8%; }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--terra);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 700;
+      color: var(--brown);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-intro {
+      font-size: 16px;
+      color: var(--warm-gray);
+      max-width: 520px;
+      font-weight: 300;
+    }
+
+    .section-header { margin-bottom: 56px; }
+
+    /* ── SERVICIOS ── */
+    #servicios { background: var(--warm-white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--cream);
+      border: 1px solid var(--sand-dark);
+      border-radius: var(--radius);
+      padding: 40px 28px 36px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--terra), var(--amber));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--terra-pale);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--warm-gray);
+      line-height: 1.7;
+    }
+
+    /* ── PROPIEDADES ── */
+    #propiedades { background: var(--sand); }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 22px;
+      border-radius: 100px;
+      border: 1.5px solid var(--sand-dark);
+      background: var(--warm-white);
+      color: var(--brown-light);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--terra);
+      color: var(--warm-white);
+      border-color: var(--terra);
+    }
+
+    .props-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .prop-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .prop-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .prop-card.hidden { display: none; }
+
+    .prop-image {
+      height: 192px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prop-image svg { width: 140px; height: auto; }
+
+    .bg-duplex  { background: linear-gradient(150deg, #f0d8c8 0%, #e8c4a8 100%); }
+    .bg-cochera { background: linear-gradient(150deg, #d8e8e0 0%, #c4dcd0 100%); }
+    .bg-galpon  { background: linear-gradient(150deg, #dce0e8 0%, #c8cede 100%); }
+    .bg-depto   { background: linear-gradient(150deg, #e8daf0 0%, #d4c4e4 100%); }
+    .bg-terreno { background: linear-gradient(150deg, #dcecd8 0%, #c8e0c0 100%); }
+
+    .prop-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 5px 13px;
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .badge-alquiler { background: var(--terra); color: white; }
+    .badge-venta    { background: var(--brown); color: white; }
+
+    .prop-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .prop-type {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--terra);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .prop-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .prop-location {
+      font-size: 13px;
+      color: var(--warm-gray);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 16px;
+    }
+
+    .prop-location svg { flex-shrink: 0; }
+
+    .prop-features {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .prop-feat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--brown-light);
+      background: var(--sand);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .prop-cta {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-prop {
+      flex: 1;
+      padding: 11px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-prop-primary { background: var(--brown); color: white; }
+    .btn-prop-primary:hover { background: var(--brown-light); }
+
+    .btn-prop-wa { background: #25d366; color: white; }
+    .btn-prop-wa:hover { background: #1fbb58; }
+
+    /* ── SOBRE MÍ ── */
+    #sobre-mi { background: var(--brown); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .about-illustration { width: 100%; max-width: 360px; }
+
+    .about-card {
+      background: rgba(255,252,248,0.07);
+      border: 1px solid rgba(196,106,58,0.28);
+      border-radius: 20px;
+      padding: 40px 36px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .about-avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--terra), var(--terra-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 0 6px rgba(196,106,58,0.2);
+    }
+
+    .about-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--warm-white);
+      margin-bottom: 5px;
+    }
+
+    .about-role {
+      font-size: 11px;
+      color: var(--terra-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+    }
+
+    .about-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+    }
+
+    .chip {
+      background: rgba(196,106,58,0.15);
+      border: 1px solid rgba(196,106,58,0.3);
+      color: rgba(255,252,248,0.78);
+      padding: 4px 13px;
+      border-radius: 100px;
+      font-size: 12px;
+    }
+
+    .about-content .section-title { color: var(--warm-white); }
+    .about-content .section-tag   { color: var(--terra-light); }
+
+    .about-content p {
+      color: rgba(255,252,248,0.68);
+      font-size: 15.5px;
+      line-height: 1.85;
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    .about-content strong { color: var(--terra-light); font-weight: 600; }
+
+    .about-highlight {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--terra-light) !important;
+      font-weight: 400;
+      border-left: 2px solid var(--terra);
+      padding-left: 22px;
+      margin: 28px 0 !important;
+      line-height: 1.5;
+    }
+
+    .about-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .link-fb {
+      background: #1877f2;
+      color: white;
+    }
+
+    .link-fb:hover { background: #1565d8; }
+
+    .link-mail {
+      background: rgba(255,252,248,0.09);
+      color: rgba(255,252,248,0.8);
+      border: 1px solid rgba(255,252,248,0.18);
+    }
+
+    .link-mail:hover { border-color: var(--terra); color: var(--terra-light); }
+
+    /* ── CONTACTO ── */
+    #contacto { background: var(--cream); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-items { display: flex; flex-direction: column; gap: 14px; }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      border: 1px solid var(--sand-dark);
+      transition: border-color 0.2s;
+    }
+
+    .contact-item:hover { border-color: var(--terra); }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--terra-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--terra);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      font-size: 14.5px;
+      color: var(--text);
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    .contact-item a:hover { color: var(--terra); }
+
+    .wa-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-top: 16px;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.3);
+    }
+
+    .wa-big:hover {
+      background: #1fbb58;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(37,211,102,0.4);
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: var(--brown);
+      margin-bottom: 6px;
+    }
+
+    .form-sub {
+      font-size: 14px;
+      color: var(--warm-gray);
+      margin-bottom: 26px;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 13px; }
+
+    .form-group { display: flex; flex-direction: column; gap: 5px; }
+
+    .form-group label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--brown);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 15px;
+      border: 1.5px solid var(--sand-dark);
+      border-radius: 9px;
+      font-size: 14px;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--warm-white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--terra);
+      background: white;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 96px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+
+    .btn-form {
+      padding: 14px;
+      background: var(--terra);
+      color: white;
+      border: none;
+      border-radius: 9px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 4px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-form:hover {
+      background: var(--terra-deep);
+      transform: translateY(-2px);
+    }
+
+    .form-success {
+      display: none;
+      padding: 14px;
+      background: #d1fae5;
+      border: 1px solid #6ee7b7;
+      border-radius: 9px;
+      color: #065f46;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1e0e06;
+      color: rgba(255,252,248,0.55);
+      padding: 52px 8% 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 44px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.75;
+      margin-top: 16px;
+      color: rgba(255,252,248,0.42);
+    }
+
+    .footer-col h5 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--terra-light);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .footer-col ul li a {
+      color: rgba(255,252,248,0.48);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--terra-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,252,248,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p { font-size: 13px; }
+
+    .footer-socials { display: flex; gap: 10px; }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: rgba(255,252,248,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .social-btn:hover { background: var(--terra); transform: translateY(-2px); }
+
+    /* ── WA FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      text-decoration: none;
+      animation: pulse-wa 2.8s infinite;
+      transition: transform 0.2s;
+    }
+
+    .wa-float:hover { transform: scale(1.1); }
+
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+      50%       { box-shadow: 0 6px 40px rgba(37,211,102,0.7); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      #inicio { grid-template-columns: 1fr; padding-top: 110px; }
+      .hero-illustration { display: none; }
+      .about-grid  { grid-template-columns: 1fr; gap: 44px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid  { grid-template-columns: 1fr; gap: 32px; }
+      .form-row     { grid-template-columns: 1fr; }
+      .nav-links    { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: rgba(46,28,14,0.98); padding: 20px 5%; gap: 16px; }
+      .nav-links.open { display: flex; }
+      .hamburger    { display: flex; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 64px 5%; }
+      nav     { padding: 0 5%; }
+      .services-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#inicio" class="nav-brand">
+    <svg class="nav-logomark" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="38" height="38" rx="8" fill="#c46a3a"/>
+      <path d="M19 9 L32 19 L29 19 L29 30 L22 30 L22 24 L16 24 L16 30 L9 30 L9 19 L6 19 Z" fill="none" stroke="#fffcf8" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="nav-title">
+      <span>Silvia Díaz Di Gregorio</span>
+      <span>Inmobiliaria · Tandil</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#propiedades">Propiedades</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="inicio">
+  <div class="hero-text">
+    <div class="hero-badge">35 años de trayectoria · Tandil</div>
+    <h1>Tu hogar,<br /><em>nuestro<br />compromiso</em></h1>
+    <p class="hero-sub">Compra, venta, alquiler y administración de propiedades en Tandil. Asesoramiento cercano y personalizado en cada paso.</p>
+    <div class="hero-actions">
+      <a href="#propiedades" class="btn btn-primary">Ver propiedades</a>
+      <a href="https://wa.me/542494625869" target="_blank" class="btn btn-outline">WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">35</div>
+        <div class="stat-label">Años de exp.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Propiedades</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Compromiso</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ilustración hero: ciudad/casas línea minimalista -->
+  <div class="hero-illustration">
+    <svg viewBox="0 0 440 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- luna -->
+      <circle cx="340" cy="60" r="38" fill="rgba(212,149,42,0.15)" stroke="rgba(212,149,42,0.35)" stroke-width="1"/>
+      <!-- casa grande izq -->
+      <rect x="40" y="190" width="110" height="130" rx="2" fill="rgba(255,252,248,0.07)" stroke="rgba(255,252,248,0.25)" stroke-width="1.5"/>
+      <polygon points="40,190 95,130 150,190" fill="rgba(196,106,58,0.22)" stroke="rgba(196,106,58,0.55)" stroke-width="1.5" stroke-linejoin="round"/>
+      <rect x="68" y="230" width="24" height="28" rx="2" fill="rgba(255,252,248,0.12)" stroke="rgba(255,252,248,0.3)" stroke-width="1"/>
+      <rect x="98" y="220" width="28" height="22" rx="2" fill="rgba(212,149,42,0.2)" stroke="rgba(212,149,42,0.4)" stroke-width="1"/>
+      <!-- chimenea -->
+      <rect x="108" y="140" width="10" height="22" fill="rgba(255,252,248,0.12)" stroke="rgba(255,252,248,0.28)" stroke-width="1"/>
+      <!-- edificio centro -->
+      <rect x="170" y="140" width="80" height="180" rx="2" fill="rgba(255,252,248,0.06)" stroke="rgba(255,252,248,0.22)" stroke-width="1.5"/>
+      <!-- ventanas edificio -->
+      <rect x="182" y="158" width="16" height="12" rx="1" fill="rgba(212,149,42,0.25)" stroke="rgba(212,149,42,0.45)" stroke-width="1"/>
+      <rect x="202" y="158" width="16" height="12" rx="1" fill="rgba(212,149,42,0.25)" stroke="rgba(212,149,42,0.45)" stroke-width="1"/>
+      <rect x="222" y="158" width="16" height="12" rx="1" fill="rgba(255,252,248,0.1)" stroke="rgba(255,252,248,0.2)" stroke-width="1"/>
+      <rect x="182" y="180" width="16" height="12" rx="1" fill="rgba(255,252,248,0.1)" stroke="rgba(255,252,248,0.2)" stroke-width="1"/>
+      <rect x="202" y="180" width="16" height="12" rx="1" fill="rgba(212,149,42,0.25)" stroke="rgba(212,149,42,0.45)" stroke-width="1"/>
+      <rect x="222" y="180" width="16" height="12" rx="1" fill="rgba(212,149,42,0.25)" stroke="rgba(212,149,42,0.45)" stroke-width="1"/>
+      <rect x="182" y="202" width="16" height="12" rx="1" fill="rgba(212,149,42,0.25)" stroke="rgba(212,149,42,0.45)" stroke-width="1"/>
+      <rect x="202" y="202" width="16" height="12" rx="1" fill="rgba(255,252,248,0.1)" stroke="rgba(255,252,248,0.2)" stroke-width="1"/>
+      <rect x="222" y="202" width="16" height="12" rx="1" fill="rgba(255,252,248,0.1)" stroke="rgba(255,252,248,0.2)" stroke-width="1"/>
+      <rect x="182" y="224" width="16" height="12" rx="1" fill="rgba(255,252,248,0.1)" stroke="rgba(255,252,248,0.2)" stroke-width="1"/>
+      <rect x="202" y="224" width="16" height="12" rx="1" fill="rgba(212,149,42,0.25)" stroke="rgba(212,149,42,0.45)" stroke-width="1"/>
+      <rect x="222" y="224" width="16" height="12" rx="1" fill="rgba(212,149,42,0.25)" stroke="rgba(212,149,42,0.45)" stroke-width="1"/>
+      <!-- puerta edificio -->
+      <rect x="196" y="290" width="28" height="30" rx="2" fill="rgba(196,106,58,0.2)" stroke="rgba(196,106,58,0.4)" stroke-width="1"/>
+      <!-- casa pequeña der -->
+      <rect x="270" y="220" width="90" height="100" rx="2" fill="rgba(255,252,248,0.06)" stroke="rgba(255,252,248,0.22)" stroke-width="1.5"/>
+      <polygon points="270,220 315,170 360,220" fill="rgba(196,106,58,0.18)" stroke="rgba(196,106,58,0.45)" stroke-width="1.5" stroke-linejoin="round"/>
+      <rect x="288" y="248" width="20" height="18" rx="2" fill="rgba(212,149,42,0.22)" stroke="rgba(212,149,42,0.42)" stroke-width="1"/>
+      <rect x="318" y="248" width="20" height="18" rx="2" fill="rgba(255,252,248,0.1)" stroke="rgba(255,252,248,0.2)" stroke-width="1"/>
+      <rect x="298" y="282" width="24" height="38" rx="1" fill="rgba(196,106,58,0.18)" stroke="rgba(196,106,58,0.38)" stroke-width="1"/>
+      <!-- torre alta fondo -->
+      <rect x="370" y="100" width="50" height="220" rx="2" fill="rgba(255,252,248,0.04)" stroke="rgba(255,252,248,0.14)" stroke-width="1.5"/>
+      <rect x="380" y="114" width="12" height="9" rx="1" fill="rgba(212,149,42,0.18)" stroke="rgba(212,149,42,0.3)" stroke-width="1"/>
+      <rect x="398" y="114" width="12" height="9" rx="1" fill="rgba(212,149,42,0.18)" stroke="rgba(212,149,42,0.3)" stroke-width="1"/>
+      <rect x="380" y="132" width="12" height="9" rx="1" fill="rgba(255,252,248,0.08)" stroke="rgba(255,252,248,0.15)" stroke-width="1"/>
+      <rect x="398" y="132" width="12" height="9" rx="1" fill="rgba(212,149,42,0.18)" stroke="rgba(212,149,42,0.3)" stroke-width="1"/>
+      <rect x="380" y="150" width="12" height="9" rx="1" fill="rgba(212,149,42,0.18)" stroke="rgba(212,149,42,0.3)" stroke-width="1"/>
+      <rect x="398" y="150" width="12" height="9" rx="1" fill="rgba(255,252,248,0.08)" stroke="rgba(255,252,248,0.15)" stroke-width="1"/>
+      <!-- suelo -->
+      <line x1="20" y1="320" x2="420" y2="320" stroke="rgba(255,252,248,0.15)" stroke-width="1.5"/>
+      <!-- árboles -->
+      <line x1="148" y1="320" x2="148" y2="270" stroke="rgba(255,252,248,0.25)" stroke-width="1.5"/>
+      <ellipse cx="148" cy="258" rx="14" ry="18" fill="rgba(100,160,80,0.18)" stroke="rgba(100,160,80,0.35)" stroke-width="1"/>
+      <line x1="258" y1="320" x2="258" y2="275" stroke="rgba(255,252,248,0.25)" stroke-width="1.5"/>
+      <ellipse cx="258" cy="263" rx="12" ry="16" fill="rgba(100,160,80,0.18)" stroke="rgba(100,160,80,0.35)" stroke-width="1"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section id="servicios">
+  <div class="section-header">
+    <div class="section-tag">Lo que hacemos</div>
+    <h2 class="section-title">Servicios completos<br />para cada necesidad</h2>
+    <p class="section-intro">Más de tres décadas brindando soluciones integrales en el mercado inmobiliario de Tandil.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <!-- SVG: apretón de manos / contrato -->
+      <svg class="service-icon" viewBox="0 0 56 56" fill="none">
+        <rect x="6" y="28" width="16" height="22" rx="2" stroke="#c46a3a" stroke-width="1.6"/>
+        <rect x="34" y="28" width="16" height="22" rx="2" stroke="#c46a3a" stroke-width="1.6"/>
+        <path d="M22 36 C22 36 24 32 28 32 C32 32 34 36 34 36" stroke="#c46a3a" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M14 20 L28 10 L42 20" stroke="#d4952a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="22" y1="44" x2="34" y2="44" stroke="#c46a3a" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <h3>Compra & Venta</h3>
+      <p>Acompañamiento experto en cada operación, desde la búsqueda hasta la escritura, con total transparencia.</p>
+    </div>
+
+    <div class="service-card">
+      <!-- SVG: llave -->
+      <svg class="service-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="20" cy="22" r="12" stroke="#c46a3a" stroke-width="1.6"/>
+        <circle cx="20" cy="22" r="5" stroke="#d4952a" stroke-width="1.4"/>
+        <path d="M29 31 L46 48" stroke="#c46a3a" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="38" y1="40" x2="42" y2="36" stroke="#c46a3a" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="42" y1="44" x2="46" y2="40" stroke="#c46a3a" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <h3>Alquileres</h3>
+      <p>Gestión de alquileres residenciales y comerciales. Encontramos el inmueble ideal para cada perfil.</p>
+    </div>
+
+    <div class="service-card">
+      <!-- SVG: portapapeles / administración -->
+      <svg class="service-icon" viewBox="0 0 56 56" fill="none">
+        <rect x="12" y="14" width="32" height="36" rx="3" stroke="#c46a3a" stroke-width="1.6"/>
+        <rect x="20" y="8" width="16" height="10" rx="3" stroke="#d4952a" stroke-width="1.4"/>
+        <line x1="19" y1="28" x2="37" y2="28" stroke="#c46a3a" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="19" y1="35" x2="37" y2="35" stroke="#c46a3a" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="19" y1="42" x2="29" y2="42" stroke="#c46a3a" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <h3>Administración</h3>
+      <p>Gestionamos tu propiedad de forma profesional, cuidando cada detalle mientras vos descansás.</p>
+    </div>
+
+    <div class="service-card">
+      <!-- SVG: balanza / tasación -->
+      <svg class="service-icon" viewBox="0 0 56 56" fill="none">
+        <line x1="28" y1="12" x2="28" y2="46" stroke="#c46a3a" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="16" y1="20" x2="40" y2="20" stroke="#c46a3a" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M16 20 L10 34 C10 34 13 38 16 38 C19 38 22 34 22 34 Z" stroke="#d4952a" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M40 20 L34 34 C34 34 37 38 40 38 C43 38 46 34 46 34 Z" stroke="#d4952a" stroke-width="1.4" stroke-linejoin="round"/>
+        <line x1="22" y1="46" x2="34" y2="46" stroke="#c46a3a" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <h3>Tasaciones</h3>
+      <p>Valuaciones precisas de inmuebles urbanos, rurales, viviendas y comercios en toda la región.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PROPIEDADES ── -->
+<section id="propiedades">
+  <div class="section-header">
+    <div class="section-tag">Disponibles ahora</div>
+    <h2 class="section-title">Propiedades en Tandil</h2>
+    <p class="section-intro">Consultá disponibilidad y condiciones. Siempre hay algo para vos.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="todos">Todos</button>
+    <button class="filter-btn" data-filter="alquiler">Alquiler</button>
+    <button class="filter-btn" data-filter="venta">Venta</button>
+  </div>
+
+  <div class="props-grid" id="propsGrid">
+
+    <!-- Dúplex Villa Italia -->
+    <div class="prop-card" data-tipo="alquiler">
+      <div class="prop-image bg-duplex">
+        <span class="prop-badge badge-alquiler">Alquiler</span>
+        <svg viewBox="0 0 140 110" fill="none">
+          <rect x="20" y="55" width="45" height="50" rx="2" stroke="#a3522a" stroke-width="1.5"/>
+          <polygon points="20,55 42,30 65,55" fill="rgba(196,106,58,0.25)" stroke="#a3522a" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="30" y="72" width="12" height="10" rx="1" fill="rgba(196,106,58,0.3)" stroke="#a3522a" stroke-width="1"/>
+          <rect x="48" y="68" width="13" height="10" rx="1" fill="rgba(196,106,58,0.3)" stroke="#a3522a" stroke-width="1"/>
+          <rect x="32" y="82" width="11" height="23" rx="1" fill="rgba(196,106,58,0.2)" stroke="#a3522a" stroke-width="1"/>
+          <!-- segundo piso duplex -->
+          <rect x="75" y="62" width="45" height="43" rx="2" stroke="#a3522a" stroke-width="1.5"/>
+          <polygon points="75,62 97,40 120,62" fill="rgba(196,106,58,0.2)" stroke="#a3522a" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="83" y="75" width="11" height="9" rx="1" fill="rgba(196,106,58,0.28)" stroke="#a3522a" stroke-width="1"/>
+          <rect x="99" y="75" width="11" height="9" rx="1" fill="rgba(196,106,58,0.28)" stroke="#a3522a" stroke-width="1"/>
+          <rect x="87" y="84" width="22" height="21" rx="1" fill="rgba(196,106,58,0.18)" stroke="#a3522a" stroke-width="1"/>
+          <line x1="10" y1="105" x2="130" y2="105" stroke="#a3522a" stroke-width="1.2" opacity="0.35"/>
+        </svg>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Dúplex residencial</div>
+        <h3 class="prop-title">Dúplex 2 Dorm. · Villa Italia</h3>
+        <div class="prop-location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1C3.8 1 2 2.8 2 5c0 3.4 4 8 4 8s4-4.6 4-8c0-2.2-1.8-4-4-4z" stroke="#957869" stroke-width="1.2"/><circle cx="6" cy="5" r="1.5" stroke="#957869" stroke-width="1.2"/></svg>
+          Barrio Villa Italia, Tandil
+        </div>
+        <div class="prop-features">
+          <span class="prop-feat">2 dormitorios</span>
+          <span class="prop-feat">2 baños</span>
+        </div>
+        <div class="prop-cta">
+          <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20interesa%20el%20d%C3%BAplex%20en%20Villa%20Italia." target="_blank" class="btn-prop btn-prop-wa">WhatsApp</a>
+          <a href="#contacto" class="btn-prop btn-prop-primary">Más info</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cochera 200m2 -->
+    <div class="prop-card" data-tipo="alquiler">
+      <div class="prop-image bg-cochera">
+        <span class="prop-badge badge-alquiler">Alquiler</span>
+        <svg viewBox="0 0 140 110" fill="none">
+          <rect x="15" y="40" width="110" height="65" rx="2" stroke="#2d6b52" stroke-width="1.5"/>
+          <!-- puerta cochera -->
+          <rect x="35" y="60" width="70" height="45" rx="1" fill="rgba(45,107,82,0.18)" stroke="#2d6b52" stroke-width="1.5"/>
+          <line x1="70" y1="60" x2="70" y2="105" stroke="#2d6b52" stroke-width="1.2" opacity="0.5"/>
+          <line x1="35" y1="75" x2="105" y2="75" stroke="#2d6b52" stroke-width="1" opacity="0.4"/>
+          <line x1="35" y1="90" x2="105" y2="90" stroke="#2d6b52" stroke-width="1" opacity="0.4"/>
+          <!-- techo -->
+          <path d="M8 40 L132 40" stroke="#2d6b52" stroke-width="2" stroke-linecap="round"/>
+          <path d="M15 40 L8 52 L132 52 L125 40" fill="rgba(45,107,82,0.15)" stroke="#2d6b52" stroke-width="1"/>
+          <!-- letrero 200m² -->
+          <rect x="48" y="15" width="44" height="18" rx="4" fill="rgba(45,107,82,0.15)" stroke="#2d6b52" stroke-width="1"/>
+          <text x="70" y="27" font-family="DM Sans, sans-serif" font-size="8" fill="#2d6b52" text-anchor="middle" font-weight="600">200 m²</text>
+          <line x1="70" y1="33" x2="70" y2="40" stroke="#2d6b52" stroke-width="1" opacity="0.5"/>
+          <line x1="10" y1="105" x2="130" y2="105" stroke="#2d6b52" stroke-width="1.2" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Cochera / Depósito</div>
+        <h3 class="prop-title">Cochera 200 m²</h3>
+        <div class="prop-location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1C3.8 1 2 2.8 2 5c0 3.4 4 8 4 8s4-4.6 4-8c0-2.2-1.8-4-4-4z" stroke="#957869" stroke-width="1.2"/><circle cx="6" cy="5" r="1.5" stroke="#957869" stroke-width="1.2"/></svg>
+          Tandil
+        </div>
+        <div class="prop-features">
+          <span class="prop-feat">200 m²</span>
+          <span class="prop-feat">Espacio amplio</span>
+        </div>
+        <div class="prop-cta">
+          <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20interesa%20la%20cochera%20de%20200m2." target="_blank" class="btn-prop btn-prop-wa">WhatsApp</a>
+          <a href="#contacto" class="btn-prop btn-prop-primary">Más info</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cochera 375m2 -->
+    <div class="prop-card" data-tipo="alquiler">
+      <div class="prop-image bg-cochera">
+        <span class="prop-badge badge-alquiler">Alquiler</span>
+        <svg viewBox="0 0 140 110" fill="none">
+          <rect x="10" y="38" width="120" height="67" rx="2" stroke="#2d6b52" stroke-width="1.5"/>
+          <rect x="28" y="58" width="84" height="47" rx="1" fill="rgba(45,107,82,0.15)" stroke="#2d6b52" stroke-width="1.5"/>
+          <line x1="70" y1="58" x2="70" y2="105" stroke="#2d6b52" stroke-width="1.2" opacity="0.4"/>
+          <line x1="28" y1="72" x2="112" y2="72" stroke="#2d6b52" stroke-width="1" opacity="0.35"/>
+          <line x1="28" y1="86" x2="112" y2="86" stroke="#2d6b52" stroke-width="1" opacity="0.35"/>
+          <path d="M10 38 L130 38" stroke="#2d6b52" stroke-width="2" stroke-linecap="round"/>
+          <path d="M10 38 L4 52 L136 52 L130 38" fill="rgba(45,107,82,0.12)" stroke="#2d6b52" stroke-width="1"/>
+          <rect x="48" y="14" width="44" height="18" rx="4" fill="rgba(45,107,82,0.15)" stroke="#2d6b52" stroke-width="1"/>
+          <text x="70" y="26" font-family="DM Sans, sans-serif" font-size="8" fill="#2d6b52" text-anchor="middle" font-weight="600">375 m²</text>
+          <line x1="70" y1="32" x2="70" y2="38" stroke="#2d6b52" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Cochera / Depósito</div>
+        <h3 class="prop-title">Cochera 375 m²</h3>
+        <div class="prop-location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1C3.8 1 2 2.8 2 5c0 3.4 4 8 4 8s4-4.6 4-8c0-2.2-1.8-4-4-4z" stroke="#957869" stroke-width="1.2"/><circle cx="6" cy="5" r="1.5" stroke="#957869" stroke-width="1.2"/></svg>
+          Tandil
+        </div>
+        <div class="prop-features">
+          <span class="prop-feat">375 m²</span>
+          <span class="prop-feat">Gran superficie</span>
+        </div>
+        <div class="prop-cta">
+          <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20interesa%20la%20cochera%20de%20375m2." target="_blank" class="btn-prop btn-prop-wa">WhatsApp</a>
+          <a href="#contacto" class="btn-prop btn-prop-primary">Más info</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cochera 280m2 -->
+    <div class="prop-card" data-tipo="alquiler">
+      <div class="prop-image bg-cochera">
+        <span class="prop-badge badge-alquiler">Alquiler</span>
+        <svg viewBox="0 0 140 110" fill="none">
+          <rect x="18" y="42" width="104" height="63" rx="2" stroke="#2d6b52" stroke-width="1.5"/>
+          <rect x="32" y="60" width="76" height="45" rx="1" fill="rgba(45,107,82,0.15)" stroke="#2d6b52" stroke-width="1.5"/>
+          <line x1="70" y1="60" x2="70" y2="105" stroke="#2d6b52" stroke-width="1.2" opacity="0.4"/>
+          <line x1="32" y1="75" x2="108" y2="75" stroke="#2d6b52" stroke-width="1" opacity="0.35"/>
+          <line x1="32" y1="90" x2="108" y2="90" stroke="#2d6b52" stroke-width="1" opacity="0.35"/>
+          <path d="M18 42 L122 42" stroke="#2d6b52" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 42 L12 54 L128 54 L122 42" fill="rgba(45,107,82,0.12)" stroke="#2d6b52" stroke-width="1"/>
+          <rect x="48" y="16" width="44" height="18" rx="4" fill="rgba(45,107,82,0.15)" stroke="#2d6b52" stroke-width="1"/>
+          <text x="70" y="28" font-family="DM Sans, sans-serif" font-size="8" fill="#2d6b52" text-anchor="middle" font-weight="600">280 m²</text>
+          <line x1="70" y1="34" x2="70" y2="42" stroke="#2d6b52" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Cochera / Depósito</div>
+        <h3 class="prop-title">Cochera 280 m²</h3>
+        <div class="prop-location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1C3.8 1 2 2.8 2 5c0 3.4 4 8 4 8s4-4.6 4-8c0-2.2-1.8-4-4-4z" stroke="#957869" stroke-width="1.2"/><circle cx="6" cy="5" r="1.5" stroke="#957869" stroke-width="1.2"/></svg>
+          Tandil
+        </div>
+        <div class="prop-features">
+          <span class="prop-feat">280 m²</span>
+          <span class="prop-feat">Uso versátil</span>
+        </div>
+        <div class="prop-cta">
+          <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20interesa%20la%20cochera%20de%20280m2." target="_blank" class="btn-prop btn-prop-wa">WhatsApp</a>
+          <a href="#contacto" class="btn-prop btn-prop-primary">Más info</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galpón Dinamarca -->
+    <div class="prop-card" data-tipo="venta">
+      <div class="prop-image bg-galpon">
+        <span class="prop-badge badge-venta">Venta</span>
+        <svg viewBox="0 0 140 110" fill="none">
+          <!-- galpón estructura -->
+          <rect x="15" y="50" width="110" height="55" rx="2" fill="rgba(60,80,120,0.12)" stroke="#3c5080" stroke-width="1.5"/>
+          <!-- techo industrial curvo -->
+          <path d="M12 50 Q35 28 70 26 Q105 28 128 50" fill="rgba(60,80,120,0.18)" stroke="#3c5080" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- puerta industrial grande -->
+          <rect x="46" y="70" width="48" height="35" rx="1" fill="rgba(60,80,120,0.15)" stroke="#3c5080" stroke-width="1.2"/>
+          <line x1="70" y1="70" x2="70" y2="105" stroke="#3c5080" stroke-width="1" opacity="0.5"/>
+          <line x1="46" y1="83" x2="94" y2="83" stroke="#3c5080" stroke-width="1" opacity="0.4"/>
+          <line x1="46" y1="96" x2="94" y2="96" stroke="#3c5080" stroke-width="1" opacity="0.4"/>
+          <!-- ventana claraboya -->
+          <rect x="57" y="34" width="26" height="12" rx="2" fill="rgba(60,80,120,0.18)" stroke="#3c5080" stroke-width="1"/>
+          <!-- columnas -->
+          <line x1="15" y1="50" x2="15" y2="105" stroke="#3c5080" stroke-width="1.5"/>
+          <line x1="128" y1="50" x2="128" y2="105" stroke="#3c5080" stroke-width="1.5"/>
+          <!-- terreno/pasto -->
+          <line x1="5" y1="105" x2="135" y2="105" stroke="#3c5080" stroke-width="1.5" opacity="0.4"/>
+          <path d="M5 105 Q8 100 11 105" stroke="#4a7040" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M18 105 Q21 99 24 105" stroke="#4a7040" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M115 105 Q118 100 121 105" stroke="#4a7040" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M125 105 Q128 99 131 105" stroke="#4a7040" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Galpón industrial</div>
+        <h3 class="prop-title">Galpón con Terreno · Dinamarca 1200</h3>
+        <div class="prop-location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1C3.8 1 2 2.8 2 5c0 3.4 4 8 4 8s4-4.6 4-8c0-2.2-1.8-4-4-4z" stroke="#957869" stroke-width="1.2"/><circle cx="6" cy="5" r="1.5" stroke="#957869" stroke-width="1.2"/></svg>
+          Dinamarca al 1200, Tandil
+        </div>
+        <div class="prop-features">
+          <span class="prop-feat">Galpón</span>
+          <span class="prop-feat">Con terreno</span>
+        </div>
+        <div class="prop-cta">
+          <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20interesa%20el%20galp%C3%B3n%20en%20Dinamarca%201200." target="_blank" class="btn-prop btn-prop-wa">WhatsApp</a>
+          <a href="#contacto" class="btn-prop btn-prop-primary">Más info</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Depto Maipú -->
+    <div class="prop-card" data-tipo="alquiler">
+      <div class="prop-image bg-depto">
+        <span class="prop-badge badge-alquiler">Alquiler</span>
+        <svg viewBox="0 0 140 110" fill="none">
+          <!-- edificio -->
+          <rect x="30" y="20" width="80" height="85" rx="2" fill="rgba(90,50,130,0.12)" stroke="#5a3282" stroke-width="1.5"/>
+          <!-- piso a piso -->
+          <line x1="30" y1="42" x2="110" y2="42" stroke="#5a3282" stroke-width="0.8" opacity="0.4"/>
+          <line x1="30" y1="64" x2="110" y2="64" stroke="#5a3282" stroke-width="0.8" opacity="0.4"/>
+          <line x1="30" y1="86" x2="110" y2="86" stroke="#5a3282" stroke-width="0.8" opacity="0.4"/>
+          <!-- ventanas piso 1 -->
+          <rect x="40" y="25" width="14" height="11" rx="1" fill="rgba(90,50,130,0.22)" stroke="#5a3282" stroke-width="1"/>
+          <rect x="63" y="25" width="14" height="11" rx="1" fill="rgba(212,149,42,0.35)" stroke="#5a3282" stroke-width="1"/>
+          <rect x="86" y="25" width="14" height="11" rx="1" fill="rgba(90,50,130,0.22)" stroke="#5a3282" stroke-width="1"/>
+          <!-- ventanas piso 2 -->
+          <rect x="40" y="47" width="14" height="11" rx="1" fill="rgba(212,149,42,0.35)" stroke="#5a3282" stroke-width="1"/>
+          <rect x="63" y="47" width="14" height="11" rx="1" fill="rgba(90,50,130,0.22)" stroke="#5a3282" stroke-width="1"/>
+          <rect x="86" y="47" width="14" height="11" rx="1" fill="rgba(212,149,42,0.35)" stroke="#5a3282" stroke-width="1"/>
+          <!-- ventanas piso 3 -->
+          <rect x="40" y="69" width="14" height="11" rx="1" fill="rgba(90,50,130,0.22)" stroke="#5a3282" stroke-width="1"/>
+          <rect x="63" y="69" width="14" height="11" rx="1" fill="rgba(212,149,42,0.35)" stroke="#5a3282" stroke-width="1"/>
+          <rect x="86" y="69" width="14" height="11" rx="1" fill="rgba(90,50,130,0.22)" stroke="#5a3282" stroke-width="1"/>
+          <!-- puerta -->
+          <rect x="55" y="88" width="30" height="17" rx="1" fill="rgba(90,50,130,0.2)" stroke="#5a3282" stroke-width="1"/>
+          <circle cx="82" cy="96" r="1.5" fill="#5a3282"/>
+          <!-- suelo -->
+          <line x1="15" y1="105" x2="125" y2="105" stroke="#5a3282" stroke-width="1.5" opacity="0.35"/>
+        </svg>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Departamento</div>
+        <h3 class="prop-title">Departamento · Maipú 249</h3>
+        <div class="prop-location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1C3.8 1 2 2.8 2 5c0 3.4 4 8 4 8s4-4.6 4-8c0-2.2-1.8-4-4-4z" stroke="#957869" stroke-width="1.2"/><circle cx="6" cy="5" r="1.5" stroke="#957869" stroke-width="1.2"/></svg>
+          Maipú 249, Tandil
+        </div>
+        <div class="prop-features">
+          <span class="prop-feat">Departamento</span>
+          <span class="prop-feat">Céntrico</span>
+        </div>
+        <div class="prop-cta">
+          <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20interesa%20el%20departamento%20en%20Maip%C3%BA%20249." target="_blank" class="btn-prop btn-prop-wa">WhatsApp</a>
+          <a href="#contacto" class="btn-prop btn-prop-primary">Más info</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terreno Alvarado -->
+    <div class="prop-card" data-tipo="venta">
+      <div class="prop-image bg-terreno">
+        <span class="prop-badge badge-venta">Venta</span>
+        <svg viewBox="0 0 140 110" fill="none">
+          <!-- terreno con marco -->
+          <rect x="20" y="30" width="100" height="72" rx="2" fill="rgba(50,110,50,0.12)" stroke="#3a7030" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <!-- dimensiones -->
+          <!-- línea horizontal -->
+          <line x1="20" y1="18" x2="120" y2="18" stroke="#3a7030" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="20" y1="14" x2="20" y2="22" stroke="#3a7030" stroke-width="1.2"/>
+          <line x1="120" y1="14" x2="120" y2="22" stroke="#3a7030" stroke-width="1.2"/>
+          <text x="70" y="15" font-family="DM Sans, sans-serif" font-size="7.5" fill="#3a7030" text-anchor="middle" font-weight="600">10 m</text>
+          <!-- línea vertical -->
+          <line x1="132" y1="30" x2="132" y2="102" stroke="#3a7030" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="128" y1="30" x2="136" y2="30" stroke="#3a7030" stroke-width="1.2"/>
+          <line x1="128" y1="102" x2="136" y2="102" stroke="#3a7030" stroke-width="1.2"/>
+          <text x="132" y="70" font-family="DM Sans, sans-serif" font-size="7.5" fill="#3a7030" text-anchor="middle" font-weight="600" transform="rotate(90,132,70)">45 m</text>
+          <!-- árboles dentro terreno -->
+          <line x1="40" y1="102" x2="40" y2="72" stroke="#3a7030" stroke-width="1.2" opacity="0.6"/>
+          <ellipse cx="40" cy="65" rx="10" ry="13" fill="rgba(50,110,50,0.2)" stroke="#3a7030" stroke-width="1" opacity="0.7"/>
+          <line x1="60" y1="102" x2="60" y2="78" stroke="#3a7030" stroke-width="1.2" opacity="0.5"/>
+          <ellipse cx="60" cy="72" rx="9" ry="12" fill="rgba(50,110,50,0.18)" stroke="#3a7030" stroke-width="1" opacity="0.6"/>
+          <!-- compass / brújula pequeña -->
+          <circle cx="96" cy="68" r="14" fill="rgba(255,255,255,0.35)" stroke="#3a7030" stroke-width="1"/>
+          <text x="96" y="57" font-family="DM Sans, sans-serif" font-size="7" fill="#3a7030" text-anchor="middle" opacity="0.8">N</text>
+          <line x1="96" y1="60" x2="96" y2="82" stroke="#3a7030" stroke-width="1" opacity="0.5"/>
+          <line x1="84" y1="68" x2="108" y2="68" stroke="#3a7030" stroke-width="1" opacity="0.5"/>
+          <polygon points="96,58 93,68 96,66 99,68" fill="rgba(196,106,58,0.7)"/>
+        </svg>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Terreno urbano</div>
+        <h3 class="prop-title">Terreno 10×45 m · Alvarado 800</h3>
+        <div class="prop-location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1C3.8 1 2 2.8 2 5c0 3.4 4 8 4 8s4-4.6 4-8c0-2.2-1.8-4-4-4z" stroke="#957869" stroke-width="1.2"/><circle cx="6" cy="5" r="1.5" stroke="#957869" stroke-width="1.2"/></svg>
+          Alvarado al 800, Tandil
+        </div>
+        <div class="prop-features">
+          <span class="prop-feat">450 m²</span>
+          <span class="prop-feat">10 × 45 m</span>
+          <span class="prop-feat">Apto construcción</span>
+        </div>
+        <div class="prop-cta">
+          <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20interesa%20el%20terreno%2010x45%20en%20Alvarado%20800." target="_blank" class="btn-prop btn-prop-wa">WhatsApp</a>
+          <a href="#contacto" class="btn-prop btn-prop-primary">Más info</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SOBRE MÍ ── -->
+<section id="sobre-mi">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="about-avatar">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="16" r="8" stroke="#fffcf8" stroke-width="1.5"/>
+            <path d="M6 40 C6 30 38 30 38 40" stroke="#fffcf8" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="about-name">Silvia Díaz Di Gregorio</div>
+        <div class="about-role">Corredora Inmobiliaria · Tandil</div>
+        <div class="about-chips">
+          <span class="chip">Compra & Venta</span>
+          <span class="chip">Alquileres</span>
+          <span class="chip">Administración</span>
+          <span class="chip">Tasaciones</span>
+          <span class="chip">Ciudad & Campo</span>
+          <span class="chip">Comerciales</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="section-tag">Sobre mí</div>
+      <h2 class="section-title">35 años acompañando familias en Tandil</h2>
+      <p>Me dedico al rubro inmobiliario con <strong>35 años de trayectoria</strong> en compra, venta, alquileres, administración y tasación de inmuebles.</p>
+      <p>Trabajo con propiedades en ciudad y campo: viviendas, locales y espacios comerciales. Cada operación es única y la abordo con la misma dedicación y profesionalismo.</p>
+      <p class="about-highlight">"Mi objetivo es acompañar a mis clientes a cumplir sus sueños."</p>
+      <div class="about-links">
+        <a href="https://www.facebook.com/silviadiazpropiedades/" target="_blank" class="link-pill link-fb">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          Facebook
+        </a>
+        <a href="mailto:silviadiaz_propiedades@yahoo.com.ar" class="link-pill link-mail">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          silviadiaz_propiedades@yahoo.com.ar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section id="contacto">
+  <div class="section-header">
+    <div class="section-tag">Hablemos</div>
+    <h2 class="section-title">Contacto</h2>
+    <p class="section-intro">Disponible de lunes a viernes, 9:00 a 14:00 hs. No dudes en escribirme.</p>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c46a3a" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Dirección</h4>
+            <p>Pasteur Nº 636<br />Tandil, Buenos Aires, Argentina</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c46a3a" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <div>
+            <h4>Horarios</h4>
+            <p>Lunes a Viernes<br />9:00 – 14:00 hs</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c46a3a" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:silviadiaz_propiedades@yahoo.com.ar">silviadiaz_propiedades@yahoo.com.ar</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c46a3a" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </div>
+          <div>
+            <h4>Facebook</h4>
+            <a href="https://www.facebook.com/silviadiazpropiedades/" target="_blank">silviadiazpropiedades</a>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20comunico%20desde%20tu%20p%C3%A1gina%20web." target="_blank" class="wa-big">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.399 5.61L.057 23.8l6.304-1.304A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.134-1.455l-.368-.218-3.817.79.814-3.726-.24-.382A9.818 9.818 0 0 1 12 2.182c5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg>
+        Escribime al WhatsApp
+      </a>
+    </div>
+
+    <div>
+      <h3 class="form-title">Enviame tu consulta</h3>
+      <p class="form-sub">Te respondo a la brevedad por WhatsApp o email.</p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="Tu teléfono" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+          <label>Tipo de consulta</label>
+          <select>
+            <option value="">Seleccioná una opción</option>
+            <option>Quiero alquilar</option>
+            <option>Quiero comprar</option>
+            <option>Quiero vender</option>
+            <option>Tasación</option>
+            <option>Administración de inmueble</option>
+            <option>Otra consulta</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea placeholder="Contame qué buscás o en qué puedo ayudarte..."></textarea>
+        </div>
+        <button type="submit" class="btn-form">Enviar consulta</button>
+        <div class="form-success" id="formSuccess">
+          ¡Gracias! Me pondré en contacto a la brevedad.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#inicio" class="nav-brand" style="text-decoration:none;">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><rect width="38" height="38" rx="8" fill="#c46a3a"/><path d="M19 9 L32 19 L29 19 L29 30 L22 30 L22 24 L16 24 L16 30 L9 30 L9 19 L6 19 Z" fill="none" stroke="#fffcf8" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div class="nav-title">
+          <span>Silvia Díaz Di Gregorio</span>
+          <span>Inmobiliaria · Tandil</span>
+        </div>
+      </a>
+      <p>35 años de trayectoria en compra, venta, alquileres y administración de inmuebles en Tandil. Acompañándote a cumplir tus sueños.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#servicios">Compra & Venta</a></li>
+        <li><a href="#servicios">Alquileres</a></li>
+        <li><a href="#servicios">Administración</a></li>
+        <li><a href="#servicios">Tasaciones</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="https://wa.me/542494625869" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:silviadiaz_propiedades@yahoo.com.ar">Email</a></li>
+        <li><a href="https://www.facebook.com/silviadiazpropiedades/" target="_blank">Facebook</a></li>
+        <li><a href="#contacto">Formulario</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Inmobiliaria Silvia Díaz Di Gregorio · Pasteur 636, Tandil · Lun–Vie 9–14 hs</p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/silviadiazpropiedades/" target="_blank" class="social-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,252,248,0.7)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://wa.me/542494625869" target="_blank" class="social-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,252,248,0.7)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.399 5.61L.057 23.8l6.304-1.304A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      </a>
+      <a href="mailto:silviadiaz_propiedades@yahoo.com.ar" class="social-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,252,248,0.7)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/542494625869?text=Hola%20Silvia!%20Me%20comunico%20desde%20tu%20p%C3%A1gina%20web." target="_blank" class="wa-float" title="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.399 5.61L.057 23.8l6.304-1.304A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+</a>
+
+<script>
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Filter propiedades
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.prop-card').forEach(card => {
+        const show = f === 'todos' || card.dataset.tipo === f;
+        card.style.display = show ? 'flex' : 'none';
+        card.classList.toggle('hidden', !show);
+      });
+    });
+  });
+
+  // Form — redirige a WhatsApp
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = this.querySelector('input[type="text"]').value || 'sin nombre';
+    const email  = this.querySelector('input[type="email"]').value || '';
+    const msg    = this.querySelector('textarea').value || '';
+    const waMsg  = encodeURIComponent(`Hola Silvia! Soy ${nombre} (${email}). ${msg}`);
+    document.getElementById('formSuccess').style.display = 'block';
+    setTimeout(() => window.open(`https://wa.me/542494625869?text=${waMsg}`, '_blank'), 700);
+    this.reset();
+  });
+
+  // Nav highlight on scroll
+  const secciones = document.querySelectorAll('section[id]');
+  const anchors   = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    secciones.forEach(s => { if (window.scrollY >= s.offsetTop - 110) current = s.id; });
+    anchors.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--terra-light)' : '';
+    });
+  });
+</script>
+</body>
+</html>
